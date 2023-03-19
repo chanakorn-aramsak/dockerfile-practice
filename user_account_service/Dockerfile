@@ -1,17 +1,14 @@
 # Use Node v4 as the base image.
-FROM node:17-alphine
+FROM node:4
 
 # Add everything in the current directory to our image, in the 'app' folder.
-ADD ./ /app
-
-# Set the working directory to the app folder.
+ADD . /app
 
 # Install dependencies
-RUN cd /app;npm install
-
+RUN cd /app; npm install
 
 # Expose our server port.
-EXPOSE 80
+EXPOSE 8080
 
 # Run our app.
 CMD ["node", "/app/index.js"]
