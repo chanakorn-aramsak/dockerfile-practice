@@ -8,7 +8,7 @@ ADD . /app
 RUN cd /app; npm install
 
 # Expose our server port.
-EXPOSE 8080
+EXPOSE 80
 
 # Run our app.
 CMD ["node", "/app/index.js"]
